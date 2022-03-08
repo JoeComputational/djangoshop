@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 
 class Category(models.Model):
@@ -7,10 +8,10 @@ class Category(models.Model):
     #Slug name is the category used in the url bar for direction - setting a max character for this - can only have one slug with the same name
     slug = models.SlugField(max_length=255, unique=True)
 
-
     class Meta:
         #Setting a plural name for django setting categorys - so correctly altered to use categories
         verbose_name_plural = 'categories'
+        
 
     def __str__(self):
         #Returned data is brough up by name and not by dataset type
@@ -37,6 +38,9 @@ class Product(models.Model):
         verbose_name_plural = 'Products'
         #allows sorting within the application - such as ordering lists by price etc/last item added 
         ordering = ('-created',)
+        
+    def get_absolute_url(self):
+            return reverse('store:product_detail', args=[self.slug])
         
     def __str__(self):
         #returns added item name when processing it
