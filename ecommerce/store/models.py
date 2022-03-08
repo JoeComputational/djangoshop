@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Category(models.Model):
     #This sets the maximum character count in input - also limits special characters for slugfield
@@ -24,7 +25,19 @@ class Product(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='product_creator')
     itemname = models.CharField(max_length=255)
     manufacturer = models.CharField(max_length=255, default='admin')
+    #This images doesnt store the image in the table, just the link to the images
     image = models.ImageField(upload_to='images/')
     itemdescription = models.TextField(blank=True)
     slug = models.SlugField(max_length=255)
     price = models.DecimalField(max_digits=4, decimal_places=2)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name_plural = 'Products'
+        #allows sorting within the application - such as ordering lists by price etc/last item added 
+        ordering = ('-created',)
+        
+    def __str__(self):
+        #returns added item name when processing it
+        return self.itemname
