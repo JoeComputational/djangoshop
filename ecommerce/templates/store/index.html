@@ -28,7 +28,10 @@
             <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
             <div class="card-body">
               <p class="card-text">
-                
+                <form action="{% url 'checkout' %}" method="POST">
+                  {% csrf_token %}
+        <button type="submit" id="checkout-button">Purchase</button>
+      </form>
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <small class="text-muted">Delicious and Nutritious</small>

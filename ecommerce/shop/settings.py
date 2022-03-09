@@ -131,3 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #This is the configuration to get the media images linked and working from the folder
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+#The stripe settings    
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_TEST_PUBLIC')
+STRIPE_SECRET_KEY = os.environ.get(
+    'sk_test_51KbFLTIqGVD2vOHKHV9fRXfpId64cxto2m7wiVebcWdXeNZOWK40fDw5CIHeHWOmtmcGqlbmQoSqOe9cAxhQJ8mm00iQucHl40')
