@@ -20,7 +20,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('store.urls', namespace='store'))
+    path('', include('store.urls', namespace='store')),
 ]
 
 #This just helps debug and gives me additional information when I facew an error  - good when using in browser - must turn off when done
