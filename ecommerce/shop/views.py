@@ -4,7 +4,7 @@ from django.conf import settings
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, '../templates/store/index.html')
 
 
 stripe.api_key = 'sk_test_51KbFLTIqGVD2vOHKHV9fRXfpId64cxto2m7wiVebcWdXeNZOWK40fDw5CIHeHWOmtmcGqlbmQoSqOe9cAxhQJ8mm00iQucHl40'

@@ -25,6 +25,7 @@ urlpatterns = [
     path('checkout/', checkout, name='checkout'),
     path('success/', success, name='success'),
     path('cancel/', cancel, name='cancel'),
+    path('index/', index, name='index'),
 ]
 
 #This just helps debug and gives me additional information when I facew an error  - good when using in browser - must turn off when done

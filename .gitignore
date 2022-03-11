@@ -1,4 +1,5 @@
 /venv
+ecommerce/.env
 ecommerce/venv
 ecommerce/shop/venv
 ecommerce/shop/__pycache__
