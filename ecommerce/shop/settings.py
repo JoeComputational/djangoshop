@@ -136,3 +136,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_TEST_PUBLIC')
 STRIPE_SECRET_KEY = os.environ.get(
     'sk_test_51KbFLTIqGVD2vOHKHV9fRXfpId64cxto2m7wiVebcWdXeNZOWK40fDw5CIHeHWOmtmcGqlbmQoSqOe9cAxhQJ8mm00iQucHl40')
+
+
+#This is to set both the keys via Stripe - ikmportant to import public and private

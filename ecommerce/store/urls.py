@@ -10,3 +10,5 @@ urlpatterns = [
     path('cancel/', cancel, name='cancel'),
     path('index/', index, name='index'),
 ]
+
+#These are the internal url pathing, I need to set up another within store as well

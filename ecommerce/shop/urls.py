@@ -28,6 +28,10 @@ urlpatterns = [
     path('index/', index, name='index'),
 ]
 
+#These are the internal url pathing, I need to set up another within store as well
+
 #This just helps debug and gives me additional information when I facew an error  - good when using in browser - must turn off when done
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
+#This is to also find the media within the base directory

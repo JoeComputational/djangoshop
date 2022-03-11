@@ -28,10 +28,16 @@ def checkout(request):
         cancel_url='http://3.26.206.173:8000/cancel',
     )
     return redirect(checkout_session.url, code=303)
+#This is directly from Stripe, this is to include their purchase portal
+#Its also to record purchases on our Database
 
+
+#This is the successful purchase routing of the application
 
 def success(request):
     return render(request, "../templates/store/success.html", None)
 
+
+#This is the cancelled purchase request routing of the application
 def cancel(request):
     return render(request, "../templates/store/cancel.html", None)

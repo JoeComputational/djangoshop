@@ -11,6 +11,10 @@ class CategoryAdmin(admin.ModelAdmin):
     #Basically prepopulates the field when the name is entered/prrepopulated
     
     
+   #This was the code meant to be used to register an item in the DB
+  
+  
+   #Now done via Stripe api and product registration 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['itemname', 'manufacturer', 'slug', 'price', 'created', 'updated']
