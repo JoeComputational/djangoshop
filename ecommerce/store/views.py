@@ -24,8 +24,8 @@ def checkout(request):
             },
         ],
         mode='payment',
-        success_url='http://127.0.0.1:8000/success',
-        cancel_url='http://127.0.0.1:8000/cancel',
+        success_url='http://3.26.206.173:8000/success',
+        cancel_url='http://3.26.206.173:8000/cancel',
     )
     return redirect(checkout_session.url, code=303)
 
