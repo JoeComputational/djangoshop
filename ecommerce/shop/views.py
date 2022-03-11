@@ -21,11 +21,14 @@ def checkout(request):
         ],
         mode='payment',
         success_url='http://127.0.0.1:8000/success',
-        cancel_url='http://127.0.0.1:8000/success',
+        cancel_url='http://127.0.0.1:8000/cancel',
     )
     
     return redirect(checkout_session.url, code=303)
 
 
 def success(request):
-    return render(request, "../templaces/store/success.html", None)
+    return render(request, "../templates/store/success.html", None)
+
+def cancel(request):
+    return render(request, "../templates/store/cancel.html", None)

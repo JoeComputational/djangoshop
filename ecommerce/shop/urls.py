@@ -17,13 +17,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
-from .views import index, checkout
+from .views import index, checkout, success, cancel
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('store.urls', namespace='store')),
     path('checkout/', checkout, name='checkout'),
-    path('../templates/store/success.html/', success, name='success'),
+    path('success/', success, name='success'),
+    path('cancel/', cancel, name='cancel'),
 ]
 
 #This just helps debug and gives me additional information when I facew an error  - good when using in browser - must turn off when done

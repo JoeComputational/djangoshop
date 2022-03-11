@@ -1,0 +1,5 @@
+/venv
+ecommerce/venv
+ecommerce/shop/venv
+ecommerce/shop/__pycache__
+ecommerce/store/__pycache__
